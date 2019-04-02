@@ -1,0 +1,19 @@
+include layout
+block content
+h1 Add Employee
+table(border='1')
+    form(method='post',action='/emp/adddata')
+        #form.group
+            label(for="") Employee Id:
+            input.form-control(type="text",name="eid")
+        #form.group
+            label Employee Name:
+            input.form-control(type="text",name="ename")
+        #form.group
+            label Empployee Department:
+            input.form-control(type="text",name="edep")
+        #form.group
+            label Employee Salary:
+            input.form-control(type="text",name="esal")
+        br
+        input.btn.btn-primary(type="submit",value="Add Employee")

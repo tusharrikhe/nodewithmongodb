@@ -1,0 +1,25 @@
+include layout
+block content
+p Employee Managment System
+
+table(border='1')
+    tr
+        th Id
+        th Name
+        th Department
+        th Salary
+        th(colspan='2') Action
+
+    each data, i in empData
+        tr
+            td=data.empid
+            td=data.empname
+            td=data.empdep
+            td=data.empsalary
+            td 
+                a(href="/searchemp/"+data._id) UPDATE
+            td 
+                a(href="/deleteemp/"+data._id) Delete
+
+h1 #{title}
+a(href='/add') Add Employee
